@@ -15,6 +15,8 @@ import cvb.com.br.tasks.R;
 import cvb.com.br.tasks.api.RequestManager;
 import cvb.com.br.tasks.api.UserRequestManager;
 import cvb.com.br.tasks.model.User;
+import cvb.com.br.tasks.util.Constant;
+import cvb.com.br.tasks.util.SecurityPreferences;
 import cvb.com.br.tasks.util.ToastUtil;
 
 public class ActLogin extends AppCompatActivity {
@@ -52,13 +54,35 @@ public class ActLogin extends AppCompatActivity {
 
         vh.tvCadastrar.setText(Html.fromHtml(getString(R.string.casdastrar_usuario)));
         vh.tvCadastrar.setOnClickListener(tvCadastrarListener);
+
+        userLogedIN();
+    }
+
+    private void userLogedIN() {
+        SecurityPreferences pref = new SecurityPreferences(this);
+        String pkey = pref.getStoredString(Constant.HEADER.KEY_PERSON);
+        String tkey = pref.getStoredString(Constant.HEADER.KEY_TOKEN);
+
+        if (pkey.trim().length() > 0 && tkey.trim().length() > 0)
+            abreTelaPrincipal();
+    }
+
+    private void abreTelaPrincipal() {
+        Intent it = new Intent(getContext(), MainActivity.class);
+        startActivity(it);
+
+        finish();
+    }
+
+    private void abreTelaCadastro() {
+        Intent it = new Intent(getContext(), ActCadastroUsuario.class);
+        startActivity(it);
     }
 
     private View.OnClickListener tvCadastrarListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent it = new Intent(getContext(), ActCadastroUsuario.class);
-            startActivity(it);
+            abreTelaCadastro();
         }
     };
 
@@ -103,8 +127,7 @@ public class ActLogin extends AppCompatActivity {
     private RequestManager rm = new RequestManager() {
         @Override
         public void onSuccess(Object result) {
-            startActivity(new Intent(getContext(), MainActivity.class));
-            finish();
+            abreTelaPrincipal();
         }
 
         @Override

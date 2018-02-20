@@ -21,12 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:theme="@style/AppTheme.NoActionBar"
-            android:name=".gui.MainActivity" />
-
-        <activity android:name=".gui.ActCadastroUsuario"></activity>
+            android:name=".gui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".gui.ActCadastroUsuario" />
+        <activity android:name=".gui.ActCadastroTask"></activity>
     </application>
 
 </manifest>

@@ -2,13 +2,15 @@ package cvb.com.br.tasks.util;
 
 public class Constant {
 
+    public static final String EXTRA_TASK_TYPE = "TASK_TYPE";
+
     public static class HEADER {
         public static final String KEY_TOKEN  = "token";
         public static final String KEY_PERSON = "personkey";
     }
 
     public static class ENDPOINT {
-        public static final String ROOT  = "http://www.devmasterteam.com/CursoAndroidAPI";
+        public static final String ROOT = "http://www.devmasterteam.com/CursoAndroidAPI";
 
         public static final String AUTHENTICATION_CREATE = "Authentication/Create";
         public static final String AUTHENTICATION_LOGIN  = "Authentication/Login";
@@ -51,5 +53,11 @@ public class Constant {
     public static class USER {
         public static final String NAME  = "user_name";
         public static final String EMAIL = "user_mail";
+    }
+
+    public static class TASK_TYPE {
+        public static final int NO_FILTER   = 0;
+        public static final int OVERDUE     = 1;
+        public static final int NEXT_7_DAYS = 2;
     }
 }

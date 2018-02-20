@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_basico"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context="cvb.com.br.tasks.gui.ActCadastroTask">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Task" />
+
+    <EditText
+        android:id="@+id/et_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Prioridade" />
+
+    <Spinner
+        android:id="@+id/sp_prioridade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Data limite para execução da tarefa" />
+
+    <Button
+        android:id="@+id/bt_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione a Data Desejada" />
+
+    <CheckBox
+        android:id="@+id/cb_completa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tarefa Completa" />
+
+    <Button
+        android:id="@+id/bt_adicionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Adicinar Tarefa" />
+
+</LinearLayout>

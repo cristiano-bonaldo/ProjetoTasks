@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import cvb.com.br.tasks.db.table.TabPriority;
+
 public class DataBase extends SQLiteOpenHelper {
 
     private static final String C_DB_NAME = "DB_TASKS";
@@ -15,7 +17,7 @@ public class DataBase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(TabConvidado.C_SCRIPT_V1);
+        db.execSQL(TabPriority.C_SCRIPT_V1);
     }
 
     @Override

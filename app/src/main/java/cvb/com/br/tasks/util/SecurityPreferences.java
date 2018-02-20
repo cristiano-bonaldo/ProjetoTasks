@@ -23,4 +23,7 @@ public class SecurityPreferences {
         return this.mPreferences.getString(key, "");
     }
 
+    public void clear() {
+        this.mPreferences.edit().clear().apply();
+    }
 }

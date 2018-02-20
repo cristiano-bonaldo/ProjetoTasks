@@ -15,5 +15,11 @@
     <string name="e_mail">E-mail</string>
     <string name="senha">Senha</string>
     <string name="bt_gravar">Gravar</string>
+    <string name="sair">Sair...</string>
+    <string name="todas">Todas</string>
+    <string name="proximas">Próximos 7 dias...</string>
+    <string name="expiradas">Expiradas</string>
+
+    <string name="erro">ERRO</string>
 
 </resources>
