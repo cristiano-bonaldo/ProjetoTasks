@@ -35,10 +35,10 @@ public class UserControl extends Control {
 
         try {
             AbstractMap<String, String> params = new HashMap<>();
-            params.put(Constant.PARAMETER.NAME, user.getNome());
-            params.put(Constant.PARAMETER.EMAIL, user.getEmail());
-            params.put(Constant.PARAMETER.PASSWORD, user.getSenha());
-            params.put(Constant.PARAMETER.RECEIVE_NEWS, "false");
+            params.put(Constant.USER_PARAMETER.NAME, user.getNome());
+            params.put(Constant.USER_PARAMETER.EMAIL, user.getEmail());
+            params.put(Constant.USER_PARAMETER.PASSWORD, user.getSenha());
+            params.put(Constant.USER_PARAMETER.RECEIVE_NEWS, "false");
 
             RequestParameter requestParameter = new RequestParameter(Constant.OPERATION_METHOD.POST, url, (HashMap<String, String>) params, null);
 
@@ -78,8 +78,8 @@ public class UserControl extends Control {
 
         try {
             AbstractMap<String, String> params = new HashMap<>();
-            params.put(Constant.PARAMETER.EMAIL, user.getEmail());
-            params.put(Constant.PARAMETER.PASSWORD, user.getSenha());
+            params.put(Constant.USER_PARAMETER.EMAIL, user.getEmail());
+            params.put(Constant.USER_PARAMETER.PASSWORD, user.getSenha());
 
             RequestParameter requestParameter = new RequestParameter(Constant.OPERATION_METHOD.POST, url, (HashMap<String, String>) params, null);
 

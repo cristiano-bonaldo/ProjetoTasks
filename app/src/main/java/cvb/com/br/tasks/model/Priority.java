@@ -22,4 +22,19 @@ public class Priority {
     public String toString() {
         return "Priority[ " + "id:" + Id + " | descricao:" + Description + "]";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Priority priority = (Priority) o;
+
+        return Id == priority.Id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Id;
+    }
 }

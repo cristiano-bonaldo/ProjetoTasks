@@ -6,7 +6,7 @@ public class Constant {
 
     public static class HEADER {
         public static final String KEY_TOKEN  = "token";
-        public static final String KEY_PERSON = "personkey";
+        public static final String KEY_PERSON = "personKey";
     }
 
     public static class ENDPOINT {
@@ -35,11 +35,18 @@ public class Constant {
         public static final String DELETE = "DELETE";
     }
 
-    public static class PARAMETER {
+    public static class USER_PARAMETER {
         public static final String NAME         = "name";
         public static final String EMAIL        = "email";
         public static final String PASSWORD     = "password";
         public static final String RECEIVE_NEWS = "receivenews";
+    }
+
+    public static class TASK_PARAMETER {
+        public static final String PRIORITY_ID = "PriorityId";
+        public static final String DESCRIPTION = "Description";
+        public static final String DUEDATE     = "DueDate";
+        public static final String COMPLETE    = "Complete";
     }
 
     public static class STATUS_CODE {

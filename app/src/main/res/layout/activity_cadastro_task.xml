@@ -18,7 +18,10 @@
         android:id="@+id/et_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descrição" />
+        android:hint="Descrição"
+        android:singleLine="true"
+        android:maxLength="100"
+        />
 
     <TextView
         android:layout_width="match_parent"
